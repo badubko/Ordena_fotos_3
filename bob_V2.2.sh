@@ -47,7 +47,7 @@ a_et | 1 )
 	
 	for A_INCLUIR in ${LISTA_FUNCIONES[a_et]} a_et_main_V2.2.sh
 	do
-		if [ ! -f  "${A_INCLUIR}"]
+		if [ ! -f  "${A_INCLUIR}" ]
 		then
 			echo "La funcion ${A_INCLUIR} NO existe"
 			exit
@@ -62,7 +62,7 @@ a_nc | 2 )
 	
 	for A_INCLUIR in ${LISTA_FUNCIONES[a_nc]} a_nc_main_V2.2.sh
 	do
-		if [ ! -f  "${A_INCLUIR}"]
+		if [ ! -f  "${A_INCLUIR}" ]
 		then
 			echo "La funcion ${A_INCLUIR} NO existe"
 			exit
