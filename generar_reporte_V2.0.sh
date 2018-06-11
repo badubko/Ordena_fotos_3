@@ -1,4 +1,8 @@
 #! /bin/bash
+#------------------------------------------------------------------------
+# Generar REPORTE
+#------------------------------------------------------------------------
+
 #	Version 0.8 07/08/17 18:59:32 Se crea esta funcion en archivo aparte
 #		  extractado de Fotos_cel_a_Estr_Temp_V0.8.sh
 #		1.2 27/08/17 21:11:20 Se agregan las lineas de reporte de tiempos; 
@@ -19,15 +23,16 @@
 #		2.0	05/12/17 21:41:10 Version que incluye el reporte para Gen_list_files_NO_copiar
 #			27/05/18 00:04:51 Se agrego al total de acciones +${INF_REV_Y_NO_COPIAR}
 #							
-#------------------------------------------------------------------------
-# Generar REPORTE
-#------------------------------------------------------------------------
+
 generar_reporte ()
 {
+
+#------------------------------------------------------------------------
+# Para a_et
+#------------------------------------------------------------------------
 	
 printf "\n\n"	
-	
-if [ ${COMANDO_COMPLETO} = "Fotos_cel_a_Estr_Temp" ]
+if [ ${COMANDO_COMPLETO} = "Fotos_cel_a_Estr_Temp" ] || [ ${COMANDO_COMPLETO} = "a_et" ]
 then	
 
 printf "Generado por     : %s \n" 	$0 
@@ -122,8 +127,10 @@ printf "TOT Det por fecha  : %5s\n\n"	${Det_por_fecha}
 fi
 
 #------------------------------------------------------------------------
+# Para a_nc
+#------------------------------------------------------------------------
 
-if [ ${COMANDO_COMPLETO} = "Gen_list_files_cel_NO_copiar" ] # 1 
+if [ ${COMANDO_COMPLETO} = "Gen_list_files_cel_NO_copiar" ]  || [ ${COMANDO_COMPLETO} = "a_nc" ] # 1 
 then
 printf "Generado por     : %s \n" 	$0 
 printf "          Reporte: %s \n" 	"${RUN_DATE}"
@@ -203,5 +210,7 @@ printf "TOT Tipo Video     : %5s\n\n" ${Tipo_Video}
 fi
 return
 }
+#------------------------------------------------------------------------
+
 
 
