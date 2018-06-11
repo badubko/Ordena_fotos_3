@@ -43,14 +43,33 @@ fi
 
 case $1 in
 a_et | 1 )
-	FILE_REF="Fotos_cel_a_Estr_Temp"
-	echo "cat ${LISTA_FUNCIONES[a_et]}" 
-	# "a_et_main_V2.2.sh"  ">a_et_V2.2.sh"
+	
+	
+	for A_INCLUIR in ${LISTA_FUNCIONES[a_et]} ${a_et_main_V2.2.sh}
+	do
+		if [ ! -f  "${A_INCLUIR}"]
+		then
+			echo "La funcion ${A_INCLUIR} NO existe"
+			exit
+		fi
+	done
+	echo cat ${LISTA_FUNCIONES[a_et]} "a_et_main_V2.2.sh"  >a_et_V2.2.sh
+	
 	;;
 a_nc | 2 ) 
-	FILE_REF="Gen_list_files_cel_NO_copiar"
-#	echo "cat ${LISTA_FUNCIONES[a_nc]}" "a_nc_main_V2.2.sh"  ">a_nc_V2.2.sh"
-	cat ${LISTA_FUNCIONES[a_nc]} "a_nc_main_V2.2.sh"  >a_nc_V2.2.sh
+	
+
+	
+	for A_INCLUIR in ${LISTA_FUNCIONES[a_nc]} ${a_nc_main_V2.2.sh}
+	do
+		if [ ! -f  "${A_INCLUIR}"]
+		then
+			echo "La funcion ${A_INCLUIR} NO existe"
+			exit
+		fi
+	done
+	
+	echo cat ${LISTA_FUNCIONES[a_nc]} "a_nc_main_V2.2.sh"  >a_nc_V2.2.sh
 	;;
 *)
 	echo "$1 Opcion no conocida"
