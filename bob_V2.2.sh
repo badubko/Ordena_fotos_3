@@ -53,7 +53,7 @@ a_et | 1 )
 			exit
 		fi
 	done
-	echo cat ${LISTA_FUNCIONES[a_et]} "a_et_main_V2.2.sh"  >a_et_V2.2.sh
+	cat ${LISTA_FUNCIONES[a_et]} "a_et_main_V2.2.sh"  >a_et_V2.2.sh
 	
 	;;
 a_nc | 2 ) 
