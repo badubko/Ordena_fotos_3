@@ -69,7 +69,7 @@ a_nc | 2 )
 		fi
 	done
 	
-	echo cat ${LISTA_FUNCIONES[a_nc]} "a_nc_main_V2.2.sh"  >a_nc_V2.2.sh
+	cat ${LISTA_FUNCIONES[a_nc]} "a_nc_main_V2.2.sh"  >a_nc_V2.2.sh
 	;;
 *)
 	echo "$1 Opcion no conocida"
