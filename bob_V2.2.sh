@@ -45,7 +45,7 @@ case $1 in
 a_et | 1 )
 	
 	
-	for A_INCLUIR in ${LISTA_FUNCIONES[a_et]} ${a_et_main_V2.2.sh}
+	for A_INCLUIR in ${LISTA_FUNCIONES[a_et]} a_et_main_V2.2.sh
 	do
 		if [ ! -f  "${A_INCLUIR}"]
 		then
@@ -60,7 +60,7 @@ a_nc | 2 )
 	
 
 	
-	for A_INCLUIR in ${LISTA_FUNCIONES[a_nc]} ${a_nc_main_V2.2.sh}
+	for A_INCLUIR in ${LISTA_FUNCIONES[a_nc]} a_nc_main_V2.2.sh
 	do
 		if [ ! -f  "${A_INCLUIR}"]
 		then
