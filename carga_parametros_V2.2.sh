@@ -133,7 +133,8 @@ PATRON_DIR_MINIAT_CGATE=983db6   				# <-----  <MODIFICABLE>
 # NOM_CEL=Caso_Pru_1_5
 # NOM_CEL=Del_Blu
 
-NOM_CEL=SDHC1_Basil
+# NOM_CEL=SDHC1_Basil
+NOM_CEL=Caso_Pru_1_5
 #-------------------------------------------------------------------------------
 #    C E L U L A R
 # DIRECTORIO que contiene archivos de fotos y videos copiados desde el Celular
@@ -174,10 +175,9 @@ NOM_CEL=SDHC1_Basil
 # DIR_FILES_COPIADOS_DEL_CEL=/media/CGate/public/Pictures_Obsoleto/Fotos_BB_tmp
 # DIR_FILES_COPIADOS_DEL_CEL=/media/CGate/public/Pictures_Obsoleto/Fotos_Samsung_tmp
 # DIR_FILES_COPIADOS_DEL_CEL=/media/CGate/public/Pictures_Obsoleto/Fotos_XT910_tmp
-# DIR_FILES_COPIADOS_DEL_CEL=/home/badubko/Work_Dir_Ordena_Fotos_Cel/Para_Caso_Pru_1_5
+# DIR_FILES_COPIADOS_DEL_CEL=/media/CGate/public/2017-07-05_SDHC1_Basil_Back
 
-DIR_FILES_COPIADOS_DEL_CEL=/media/CGate/public/2017-07-05_SDHC1_Basil_Back
-
+DIR_FILES_COPIADOS_DEL_CEL=/home/badubko/Work_Dir_Ordena_Fotos_Cel/Para_Caso_Pru_1_5
 #-------------------------------------------------------------------------------------------------------
 
 #--------------------------------------------------------------------------------------------------------

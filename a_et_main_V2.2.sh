@@ -115,46 +115,7 @@
 #			25/05/18 14:27:38	Modificado caso_general 
 #			26/05/18 23:51:49	En regla EQ0_SI_SI_NO  se comento la linea 
 #								#            let AGR_A_NO_COPIAR++
-#------------------------------------------------------------------------
-# Funciones
-#-------------------------------------------------------------------------
-# Cargar las funciones 
-# 
-
-# Averiguar cual es el directorio donde reside el main y los modulos
-# para luego poder importarlos
-
-INSTALL_DIR=${0%/*}
-
-if [ ! -d  ${INSTALL_DIR} ]
-then
-   echo ${INSTALL_DIR} " No es un directorio"
-   echo "Invocar comando con ./${0}"
-   exit
-fi
-
-source ${INSTALL_DIR}/inicializar_contadores_V2.0.sh # Ya no es funcion
-
-source ${INSTALL_DIR}/carga_parametros_V1.96.sh
-
-source ${INSTALL_DIR}/crea_listado_repositorio_V2.1.sh
-
-source ${INSTALL_DIR}/listar_modulos_V1.7.sh 
-
-source ${INSTALL_DIR}/verif_dirs_y_files_V1.96.sh 
-
-source ${INSTALL_DIR}/carga_patrones_V2.0.sh 
-
-source ${INSTALL_DIR}/obtener_extension_y_tipo_V2.1.sh
-
-source ${INSTALL_DIR}/buscar_en_repositorio_V2.0.sh
-
-source ${INSTALL_DIR}/NC_en_mem_V1.95.sh
-
-source ${INSTALL_DIR}/generar_reporte_V2.0.sh
-
-
-
+#	V2.2	11/06/18 00:15:49	Nuevo main sin carga de funcionescat ${LISTA_FUNCIONES[a_nc]} "a_nc_main_V2.2.sh"  >a_nc_V2.2.sh
 #--------------------------------------------------------------------------------
 caso_canon_u_otra_cosa ()
 #-------------------------------------------------------------------------------
