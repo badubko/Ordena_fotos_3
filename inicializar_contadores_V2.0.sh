@@ -1,4 +1,7 @@
 #!/bin/bash
+#-------------------------------------------------------------------------------
+# inicializar_contadores
+#-------------------------------------------------------------------------------
 # Version:
 #         0.6 01/08/17 11:48:58  Creado este file, copiando de Gen_list...V0.6
 #	  0.8 07/08/17 14:41:03  Agregado de contadores para Dir0 y Dir1
@@ -28,10 +31,6 @@
 #	2.0		16/04/18 13:01:38 Se agregan variables REP_CANT_SINON
 #			23/04/18 15:38:47 Se agregan variables UNZIPED Z_TOT_FILES Z_TOT_ESPUREOS
 #			12/05/18 22:14:18 Se agrego REP_CANT_COP
-
-
-
-# inicializar_contadores
 
 # Contadores en cero.
 
@@ -338,3 +337,5 @@ TITULO_G_NC[EQ0_NO_SI_NO_NO]="En Rep0"
 TITULO_G_NC[EQ0_NO_SI_NO_SI]="-->CASO ANOMALO"
 TITULO_G_NC[EQ0_NO_SI_SI_NO]="-->CASO ANOMALO"
 TITULO_G_NC[EQ0_NO_SI_SI_SI]="-->CASO ANOMALO"
+
+#-------------------------------------------------------------------------------
