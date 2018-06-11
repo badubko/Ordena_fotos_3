@@ -27,8 +27,9 @@ LISTA_FUNCIONES[a_nc]="carga_parametros_V2.2.sh \
 						inicializar_contadores_V2.2.sh"
 MAIN[a_et]=a_et_main_V2.2.sh
 MAIN[a_nc]=a_nc_main_V2.2.sh
-OUT_FILE[a_et]="a_et_V2.2.sh"
-OUT_FILE[a_nc]="a_nc_V2.2.sh"
+
+OUT_FILE[a_et]=${MAIN[a_et]/_main/} # Quitamos el "_main"
+OUT_FILE[a_nc]=${MAIN[a_nc]/_main/}
 
 
 RUN_DATE="$(date  +\#\ %Y\/%m\/%d\ %H:%M)"
