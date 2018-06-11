@@ -79,6 +79,11 @@ then
   exit
 fi
 
+if [  -f "${OUT_FILE[${CUAL_MAIN}]}" ]
+then
+	rm -f "${OUT_FILE[${CUAL_MAIN}]}"
+fi
+
   echo "#! /bin/bash"											>${OUT_FILE[${CUAL_MAIN}]}
   echo "#----------------------------------------------------------------"  >>${OUT_FILE[${CUAL_MAIN}]}
   echo "# Nombre    :  ${OUT_FILE[${CUAL_MAIN}]}"				>>${OUT_FILE[${CUAL_MAIN}]}
@@ -102,4 +107,4 @@ fi
 cat ${LISTA_FUNCIONES[${CUAL_MAIN}]} ${MAIN[${CUAL_MAIN}]}  >>${OUT_FILE[${CUAL_MAIN}]}
 
 # Le sacamos permiso de w para que nadie edite este file
-# chmod 555 ${OUT_FILE[${CUAL_MAIN}]}
+chmod 555 ${OUT_FILE[${CUAL_MAIN}]}
