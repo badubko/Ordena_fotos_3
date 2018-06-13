@@ -45,7 +45,14 @@ done
 
 ULT_MODIF_PARAM=$(stat -c "%y" "${INSTALL_DIR}/${PARMS_A_INCLUIR}" )
 ULT_MODIF_PARAM=${ULT_MODIF_PARAM%.*}
-printf "%-s %-45s\n" "PARAM Incluidos: ""${INSTALL_DIR}/${PARMS_A_INCLUIR}" "${ULT_MODIF_PARAM}"
+
+DIRECT=${INSTALL_DIR}
+if [ "${DIRECT}" = '.' ]
+then
+  DIRECT=${PWD}
+fi
+ 
+printf "%-s %-45s %s %s\n" "PARAM : ""${DIRECT}/${PARMS_A_INCLUIR}" "MODIF:" "${ULT_MODIF_PARAM}"
 
 printf "\n\n"	
 }
