@@ -208,13 +208,7 @@ ARCHIVO_LOG=${WORK_DIR}/${NOM_CEL}/${RUN_DATE_FILE}'_Arch_Log_'${NOM_CEL}'.log'
 # ARCHIVO donde iran los comandos para copiar los videos en modo diferido.
 #
 WORK_SCRIPT_VID=${WORK_DIR}/${NOM_CEL}/${RUN_DATE_FILE}'_W-S_VID_'${NOM_CEL}'.sh'
-#-------------------------------------------------------------------------------------
-#
-# String para convertir fecha de exiftool   
-#             AAAA:MM:DD HH:MM:SS
-# a formato   AAAA-MM-DD_HH:MM:SS
 
-Str_conv_fecha='s/.*([0-9]{4}):([0-9]{2}):([0-9]{2}) (.*)/\1-\2-\3_\4/'
 
 #-------------------------------------------------------------------------------------
 # Permite la invocacion a listar_modulos en Verifica...
