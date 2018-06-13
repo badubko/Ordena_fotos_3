@@ -53,7 +53,7 @@ REGEN_LISTA_FILES_REP[0]=TRUE						# <-----  <MODIFICABLE>
 # El script termina si contiene "TRUE"
 
 SOLO_REGEN_LISTA_FILES_REP[1]="FALSE"					# <-----  <MODIFICABLE>
-SOLO_REGEN_LISTA_FILES_REP[0]="FALSE"					# <-----  <MODIFICABLE>
+SOLO_REGEN_LISTA_FILES_REP[0]="TRUE"					# <-----  <MODIFICABLE>
 
 #-------------------------------------------------------------------------------
 #DIRECTORIO de trabajo
