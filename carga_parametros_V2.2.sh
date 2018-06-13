@@ -25,14 +25,11 @@
 #			11/01/18 10:46:09   Se agrego SWITCH REPORTA_HALLADO_EN_NC
 #		1.96 05/04/18 16:45:24   Se usa Lista_Files_No_Copiar_Gral en vez de un file por "NOM_CEL"
 #		2.2	 04/06/18 19:05:27	 Se usan los primeros 4 caracteres en COM=${COM:0:4}
+#			12/06/18 22:26:07	 Se separaron todas las variables "no modificables"
 #--------------------------------------------------------------------------------------------------------
 
 carga_parametros ()
 {
-
-# RUN_DATE Fecha y hora de la ejecucion del script
-RUN_DATE="$(date  +\#\ %Y\/%m\/%d\ %H:%M)"
-RUN_DATE_FILE="$(date  +%Y-%m-%d_%H%M)"    # Nuevo formato para usar en nombres de Archivo
 
 #--------------------------------------------------------------------------------------------------------
 #PARAMETROS CUSTOMIZABLES
@@ -182,7 +179,6 @@ DIR_FILES_COPIADOS_DEL_CEL=/home/badubko/Work_Dir_Ordena_Fotos_Cel/Para_Caso_Pru
 
 #--------------------------------------------------------------------------------------------------------
 
-
 # DIRECTORIO que contiene la estructura con los subdirectorios y archivos que se copiaran al repositorio
 #  ESTR_TEMP_DIR=$WORK_DIR/$NOM_CEL/Estr_Temp_$NOM
 
@@ -212,13 +208,7 @@ ARCHIVO_LOG=${WORK_DIR}/${NOM_CEL}/${RUN_DATE_FILE}'_Arch_Log_'${NOM_CEL}'.log'
 # ARCHIVO donde iran los comandos para copiar los videos en modo diferido.
 #
 WORK_SCRIPT_VID=${WORK_DIR}/${NOM_CEL}/${RUN_DATE_FILE}'_W-S_VID_'${NOM_CEL}'.sh'
-#-------------------------------------------------------------------------------------
-#
-# String para convertir fecha de exiftool   
-#             AAAA:MM:DD HH:MM:SS
-# a formato   AAAA-MM-DD_HH:MM:SS
 
-Str_conv_fecha='s/.*([0-9]{4}):([0-9]{2}):([0-9]{2}) (.*)/\1-\2-\3_\4/'
 
 #-------------------------------------------------------------------------------------
 # Permite la invocacion a listar_modulos en Verifica...
@@ -234,22 +224,6 @@ REPORTA_HALLADO_EN_NC="TRUE" 						#<-----  <MODIFICABLE>
 
 # Para reportar contendido de los zip
 REPORTE_DEL_ZIP="FALSE"
-
-#-------------------------------------------------------------------------------------
-# Nombre abreviado del script en ejecucion... para que los mensajes sean mas legibles.
-
-VERS=${0##*_} 		# Elimina /abc/def/ghi/./Gen_list_files_cel_NO_copiar_  Queda "V0.5.sh"
-VERS=${VERS%.*} 	# Elimina ".sh"  Queda "V0.5"
-
-COM=${0%_*}    				#; echo $COM   # ELimina "_V0.5.sh"
-COM=${COM##*/} 				#; echo $COM   # Elimina "/abc/def/ghi/./"
-COMANDO_COMPLETO=${COM}   	# Para determinar que secciones ejecutar en Verifica.. y Genera
-COM=${COM:0:4} 				#; echo $COM   # Solo los primeros 4 caracteres
-
-NOM_ABREV=${COM}'..'${VERS}
-#-------------------------------------------------------------------------------------
-# echo "$VERS $COM $COMANDO_COMPLETO $NOM_ABREV"
-# exit
 
 return
 }

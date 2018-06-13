@@ -283,7 +283,8 @@ let TOT_ESPUREOS=0				# Extension de tipo ni de fotografia ni de video
 Lista_files=$(find $(echo ${TARGET_DIRS[$NUM_REPOS]}) -type f | grep -v ${PATRON_DIR_MINIAT_CGATE} | sort )
 
     Tfind=$(date +%s)
-    echo ${Tfind} 
+#   echo ${Tfind} 
+	date "+%F %T"
  	echo "Tiempo find: " $((Tfind-T0))	
 
 for full_path_name in ${Lista_files[@]}
@@ -486,12 +487,13 @@ do
 			echo													>>${LISTA_FILES_REP[$NUM_REPOS]}
 			echo													>>${LISTA_FILES_REP[$NUM_REPOS]}
 			T0=$(date +%s)
-			echo ${T0} 
-
+#			echo ${T0} 
+			date "+%F %T"
 			generar_lista_rep_en_mem        #  ------------->>> Aca esta la madre de Dorrego
 
 			Tfin=$(date +%s)
-			echo ${Tfin} 
+#			echo ${Tfin}
+			date "+%F %T"
 							#  ------------->>>  Aca se generan listados para ver que encontramos.
 			reporte_de_repositorio
 			reporte_de_duplicados

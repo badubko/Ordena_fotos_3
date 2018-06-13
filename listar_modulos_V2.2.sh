@@ -16,7 +16,7 @@ listar_modulos ()
 {
 # Listar versiones de los modulos...
 																					
-LISTA_SRC=$(grep -e 'source' "$0" | grep -v grep | grep -v -e '#.*source.*' | sed -e 's/source //' -e 's/#.*//'  )
+LISTA_SRC=$(grep -e 'source' "$0" | grep -v grep | grep -v PARMS | grep -v -e '#.*source.*' | sed -e 's/source //' -e 's/#.*//'  )
 for LISTA_MODS in ${LISTA_SRC}
 do
 	 DIRECT=${LISTA_MODS%/*}
@@ -42,5 +42,18 @@ do
 	   MOD=${MOD%_V*}
 	   printf "%-45s %-27s %-6s\n" ${DIRECT} ${MOD}  ${VERS} 
 done
+
+ULT_MODIF_PARAM=$(stat -c "%y" "${INSTALL_DIR}/${PARMS_A_INCLUIR}" )
+ULT_MODIF_PARAM=${ULT_MODIF_PARAM%.*}
+
+DIRECT=${INSTALL_DIR}
+if [ "${DIRECT}" = '.' ]
+then
+  DIRECT=${PWD}
+fi
+ 
+printf "%-s %s %s %s\n" "PARAM: ""${DIRECT}/${PARMS_A_INCLUIR}" 
+printf "%s %-25s\n" "MODIF: " "${ULT_MODIF_PARAM}"
+
 printf "\n\n"	
 }

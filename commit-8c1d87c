@@ -1,0 +1,38 @@
+commit 8c1d87cf136864afc996dd1c5765d8e94465bdf6
+Author: badubko <badubko@gmail.com>
+Date:   Tue Jun 12 23:12:56 2018 -0300
+
+    Revert "no concatenar carga_parametros como modulo del mail"
+    
+    This reverts commit 3fb61b94903dd26bf111b30d48e0e1c9271b4138.
+
+diff --git a/bob_V2.2.sh b/bob_V2.2.sh
+index 92e0235..0df35ff 100644
+--- a/bob_V2.2.sh
++++ b/bob_V2.2.sh
+@@ -1,5 +1,4 @@
+ #! /bin/bash
+-# bob..... "El constructor" Hahahaha
+ linea_guiones ()
+ {
+ echo "#----------------------------------------------------------------"  
+@@ -7,7 +6,8 @@ echo "#----------------------------------------------------------------"
+ 
+ declare -A LISTA_FUNCIONES MAIN OUT_FILE
+ 
+-LISTA_FUNCIONES[a_et]="vars_misc_V2.2.sh \
++LISTA_FUNCIONES[a_et]="carga_parametros_V2.2.sh \
++					   vars_misc_V2.2.sh \
+                        crea_listado_repositorio_V2.2.sh \
+                        listar_modulos_V2.2.sh \
+ 						verif_dirs_y_files_V2.2.sh \
+@@ -18,7 +18,8 @@ LISTA_FUNCIONES[a_et]="vars_misc_V2.2.sh \
+ 						generar_reporte_V2.2.sh \
+ 						inicializar_contadores_V2.2.sh"
+ 						
+-LISTA_FUNCIONES[a_nc]="vars_misc_V2.2.sh \
++LISTA_FUNCIONES[a_nc]="carga_parametros_V2.2.sh \
++						vars_misc_V2.2.sh \
+ 						crea_listado_repositorio_V2.2.sh \
+ 						listar_modulos_V2.2.sh \
+ 						verif_dirs_y_files_V2.2.sh \
