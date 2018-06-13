@@ -1,4 +1,5 @@
 #! /bin/bash
+# bob..... "El constructor" Hahahaha
 linea_guiones ()
 {
 echo "#----------------------------------------------------------------"  
@@ -6,8 +7,7 @@ echo "#----------------------------------------------------------------"
 
 declare -A LISTA_FUNCIONES MAIN OUT_FILE
 
-LISTA_FUNCIONES[a_et]="carga_parametros_V2.2.sh \
-					   vars_misc_V2.2.sh \
+LISTA_FUNCIONES[a_et]="vars_misc_V2.2.sh \
                        crea_listado_repositorio_V2.2.sh \
                        listar_modulos_V2.2.sh \
 						verif_dirs_y_files_V2.2.sh \
@@ -18,8 +18,7 @@ LISTA_FUNCIONES[a_et]="carga_parametros_V2.2.sh \
 						generar_reporte_V2.2.sh \
 						inicializar_contadores_V2.2.sh"
 						
-LISTA_FUNCIONES[a_nc]="carga_parametros_V2.2.sh \
-						vars_misc_V2.2.sh \
+LISTA_FUNCIONES[a_nc]="vars_misc_V2.2.sh \
 						crea_listado_repositorio_V2.2.sh \
 						listar_modulos_V2.2.sh \
 						verif_dirs_y_files_V2.2.sh \
