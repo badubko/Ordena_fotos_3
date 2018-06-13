@@ -248,6 +248,30 @@ return
 
 Tinicio=$(date +%s)
 
+#-------------------------------------------------------------------------------
+# Inclusion de parametros modificables al momento de cada ejecucion
+#-------------------------------------------------------------------------------
+INSTALL_DIR=${0%/*}
+
+if [ ! -d  ${INSTALL_DIR} ]
+then
+   echo ${INSTALL_DIR} " No es un directorio"
+   echo "Invocar comando con ./${0}"
+   exit
+fi
+
+PARMS_A_INCLUIR=carga_parametros_V2.2.sh		# <-----  <MODIFICABLE>
+
+
+if [ ! -f  "${INSTALL_DIR}/${PARMS_A_INCLUIR}" ]
+then
+	echo "El MODULO ${INSTALL_DIR}/${PARMS_A_INCLUIR} NO existe"
+	exit
+fi
+
+source "${INSTALL_DIR}/${PARMS_A_INCLUIR}"
+#-------------------------------------------------------------------------------
+
 carga_parametros							#--------->>>#
 
 carga_patrones								#--------->>>#
