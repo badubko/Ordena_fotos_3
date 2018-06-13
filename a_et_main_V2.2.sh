@@ -253,15 +253,11 @@ carga_parametros							#--------->>>#
 carga_patrones								#--------->>>#
 
 # inicializar_contadores   <---- NO es mas una funcion
-						# Aca se crea el array de los repositorios en memoria
+
 Verif_dirs_y_files 							#--------->>>#  
 
 lee_NC_a_mem								#--------->>>#  
 
-# ########   V2.0 Aca lo terminamos....
-
-# echo "Version de prueba. Aqui terminamos"
-# exit
 
 #-------------------------------------------------------------------------------
 
