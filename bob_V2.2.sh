@@ -89,7 +89,7 @@ then
 	rm -f "${OUT_FILE[${CUAL_MAIN}]}"
 fi
 
-  echo "#! /bin/bash"									>${OUT_FILE[${CUAL_MAIN}]}
+  echo "#! /bin/bash"									 >${OUT_FILE[${CUAL_MAIN}]}
   linea_guiones 										>>${OUT_FILE[${CUAL_MAIN}]}
   echo "# Nombre    :  ${OUT_FILE[${CUAL_MAIN}]}"		>>${OUT_FILE[${CUAL_MAIN}]}
   echo "# Creado por: $0     Run_date  : ${RUN_DATE}"	>>${OUT_FILE[${CUAL_MAIN}]}
