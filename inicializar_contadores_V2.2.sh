@@ -104,8 +104,9 @@ declare -A NCM_TAM_INDX NCM_FECHA_INDX
 declare -iA NCM_SINON_INDX
 
 #---------------------------------------------------------------------------------------
-#	V2.2 12/06/18 22:11:38 Agrupacion de variables misc que vienen de carga_parametros
-	
+#	V2.2 13/06/18 12:17:12 Inclusion de variables que vienen de vars_misc (antes
+#						 en carga_parametros)
+#---------------------------------------------------------------------------------------	
 # RUN_DATE Fecha y hora de la ejecucion del script
 RUN_DATE="$(date  +\#\ %Y\/%m\/%d\ %H:%M)"
 RUN_DATE_FILE="$(date  +%Y-%m-%d_%H%M)"    # Nuevo formato para usar en nombres de Archivo
