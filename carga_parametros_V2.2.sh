@@ -25,7 +25,7 @@
 #			11/01/18 10:46:09   Se agrego SWITCH REPORTA_HALLADO_EN_NC
 #		1.96 05/04/18 16:45:24   Se usa Lista_Files_No_Copiar_Gral en vez de un file por "NOM_CEL"
 #		2.2	 04/06/18 19:05:27	 Se usan los primeros 4 caracteres en COM=${COM:0:4}
-#			12/06/18 22:26:07	 Se separaron todas las variables "no customizables"
+#			12/06/18 22:26:07	 Se separaron todas las variables "no modificables"
 #--------------------------------------------------------------------------------------------------------
 
 carga_parametros ()
