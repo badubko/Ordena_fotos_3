@@ -52,7 +52,8 @@ then
   DIRECT=${PWD}
 fi
  
-printf "%-s %-45s %s %s\n" "PARAM : ""${DIRECT}/${PARMS_A_INCLUIR}" "MODIF:" "${ULT_MODIF_PARAM}"
+printf "%-s %-45s %s %s\n" "PARAM: ""${DIRECT}/${PARMS_A_INCLUIR}" 
+printf "%s %-25s\n" "MODIF: " "${ULT_MODIF_PARAM}"
 
 printf "\n\n"	
 }
