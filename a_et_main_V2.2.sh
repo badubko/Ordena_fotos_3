@@ -151,10 +151,10 @@ caso_general ()
 {
 # echo "Es de los generales sacar fecha del nombre"
 
-grep -q -e "$str_12\|$str_14" <<<${FNAME}
+grep -q -e "$str_12\|$str_14\|$str_15" <<<${FNAME}
  if [ $? = "0" ]
  then
-	Dir_dest=$( /bin/sed 's/\([0-9]\{4\}\)\([0-9]\{2\}\)/\1-\2-/' <<<${FNAME} )
+	Dir_dest=$( /bin/sed 's/^\([0-9]\{4\}\)\([0-9]\{2\}\)/\1-\2-/' <<<${FNAME} )
 	Dir_dest=${Dir_dest:0:10} 
  else
 	# Eliminar prefijo tipo IMG, DSCN, etc ; convertir a AAAA-MM-DD y quedarnos con esos primeros 10 caract
