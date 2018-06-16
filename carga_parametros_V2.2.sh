@@ -56,11 +56,6 @@ SOLO_REGEN_LISTA_FILES_REP[1]="FALSE"					# <-----  <MODIFICABLE>
 SOLO_REGEN_LISTA_FILES_REP[0]="FALSE"					# <-----  <MODIFICABLE>
 
 #-------------------------------------------------------------------------------
-#DIRECTORIO de trabajo
-WORK_DIR=~/Work_Dir_Ordena_Fotos_Cel   						# <-----  <MODIFICABLE>
-#WORK_DIR=/media/CGate/public/Work_Dir_Ordena_Fotos_Cel   	# <-----  <MODIFICABLE>
-
-#-------------------------------------------------------------------------------
 #    R E P O S I T O R I O
 # DIRECTORIO del Repositorio
 #-------------------------------------------------------------------------------
@@ -87,8 +82,14 @@ LISTA_DIRS[0]=""
 
 LISTA_DIRS[1]=""
 # LISTA_DIRS[1]="2012 2013 2014 2015 2016 2017 2018"				# <-----  <MODIFICABLE>
+
 #-------------------------------------------------------------------------------
-# ARCHIVO que contiene Listado de Directorios y archivos contenidos en el repositorio de fotos y videos
+#DIRECTORIO de trabajo
+WORK_DIR=~/Work_Dir_Ordena_Fotos_Cel   						# <-----  <MODIFICABLE>
+#WORK_DIR=/media/CGate/public/Work_Dir_Ordena_Fotos_Cel   	# <-----  <MODIFICABLE>
+#-------------------------------------------------------------------------------
+# ARCHIVO  de LOG que contiene Listado de duplicados en repositorios y 
+#	el reporte de repositorio.
 # Desde version 1.1 en mas, es un log file, ya que se genera una lista en memoria.
 # Se agrega la fecha de ejecucion al log de repositorio... Ya se vera su practicidad...
 
@@ -105,7 +106,7 @@ LISTA_FILES_REP[1]=${WORK_DIR}/${RUN_DATE_FILE}"_Lista_Files_Rep_Dir1.log"			# <
 PATRON_DIR_MINIAT_CGATE=983db6   				# <-----  <MODIFICABLE>
 #--------------------------------------------------------------------------------------------------------
 # Nombre/Modelo del Celular
-
+#--------------------------------------------------------------------------------------------------------
 # NOM_CEL=BLU_INT
 # NOM_CEL=PRUEBA_TRUCH2           				# <-----  <MODIFICABLE>
 # NOM_CEL=BLU_SD_Corrupt
@@ -117,21 +118,24 @@ PATRON_DIR_MINIAT_CGATE=983db6   				# <-----  <MODIFICABLE>
 # NOM_CEL=16GB_Lenta
 # NOM_CEL=Sams_Viejo
 # NOM_CEL=Home_DCIM
-# NOM_CEL=Fot_XT910_tmp
+
 # NOM_CEL=Fot_BB_tmp
 
 # NOM_CEL=Home_Fot_Canon_tmp
 
 # NOM_CEL=16GB_Lenta
-# NOM_CEL=Del_Blu
+#
 # NOM_CEL=Fot_BB_tmp
 # NOM_CEL=Sams_Viejo
-# NOM_CEL=Fot_XT910_tmp
+# 
 # NOM_CEL=Caso_Pru_1_5
 # NOM_CEL=Del_Blu
+ 
+# NOM_CEL=Caso_Pru_1_5
+# NOM_CEL=Fot_XT910_tmp
+# NOM_CEL=Del_Blu
+NOM_CEL=SDHC1_Basil
 
-# NOM_CEL=SDHC1_Basil
-NOM_CEL=Caso_Pru_1_5
 #-------------------------------------------------------------------------------
 #    C E L U L A R
 # DIRECTORIO que contiene archivos de fotos y videos copiados desde el Celular
@@ -144,10 +148,10 @@ NOM_CEL=Caso_Pru_1_5
 
 # OOOJJJJOOOO con esto!!! <-----------------
 # 
-# DIR_FILES_COPIADOS_DEL_CEL=/home/badubko/20170317_Back_Fotos_SD 	       # <-----  <MODIFICABLE>
+#        # <-----  <MODIFICABLE>
 
 # DIR_FILES_COPIADOS_DEL_CEL=/media/badubko/MICRO_SD_2/DCIM/Camera
-# DIR_FILES_COPIADOS_DEL_CEL=/home/badubko/tmp_XT910_back
+
 # DIR_FILES_COPIADOS_DEL_CEL=/media/CGate/public/20170809_16GB_Lenta_Back  # <-----  <MODIFICABLE>
 
 # DIR_FILES_COPIADOS_DEL_CEL=/home/badubko/Downloads/2018-04-24_BLU_SD_TMP
@@ -174,7 +178,10 @@ NOM_CEL=Caso_Pru_1_5
 # DIR_FILES_COPIADOS_DEL_CEL=/media/CGate/public/Pictures_Obsoleto/Fotos_XT910_tmp
 # DIR_FILES_COPIADOS_DEL_CEL=/media/CGate/public/2017-07-05_SDHC1_Basil_Back
 
-DIR_FILES_COPIADOS_DEL_CEL=/home/badubko/Work_Dir_Ordena_Fotos_Cel/Para_Caso_Pru_1_5
+# DIR_FILES_COPIADOS_DEL_CEL=/home/badubko/Work_Dir_Ordena_Fotos_Cel/Para_Caso_Pru_1_5
+# DIR_FILES_COPIADOS_DEL_CEL=/home/badubko/tmp_XT910_back
+# DIR_FILES_COPIADOS_DEL_CEL=/home/badubko/20170317_Back_Fotos_SD 
+DIR_FILES_COPIADOS_DEL_CEL=/media/CGate/public/2017-07-05_SDHC1_Basil_Back	
 #-------------------------------------------------------------------------------------------------------
 
 #--------------------------------------------------------------------------------------------------------
