@@ -18,10 +18,13 @@ carga_patrones ()
 #  BLU
 #  IMG_20161010_100530.jpg					OK
 #   Camara de video 20180522010203_010.mjpeg	OK
+#   Otro tipo de Samsung 	20180325_133227.jpg 
+#							20180530_061459.mp4
 str_10="IMG_"
 str_11="VID_"
 str_12="^[0-9]\{4\}\-[0-9]\{2\}\-[0-9]\{2\}"
 str_14="^[0-9]\{14\}_010"
+str_15="^[0-9]\{8\}_[0-9]\{6\}\."
 
 #  Samsung viejo
 #       2013-07-14 12.50.09.jpg  <-- OJO con el Blanco; Al generar manualmente el archivo      OK
@@ -85,7 +88,7 @@ str_45="DSCF[0-9]\{4\}\."
 str_46="CAM[0-9]\{5\}\."
 str_47="SMOV[0-9]\{4\}\." 
 
-str_patron_gral="${str_10}\|${str_11}\|${str_12}\|${str_14}\|${str_20}\|${str_30}\|${str_31}\|${str_32}"
+str_patron_gral="${str_10}\|${str_11}\|${str_12}\|${str_14}\|${str_15}\|${str_20}\|${str_30}\|${str_31}\|${str_32}"
 str_sustit="s/""${str_patron_gral}""//"
 
 return
