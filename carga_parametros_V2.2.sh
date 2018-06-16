@@ -119,13 +119,11 @@ PATRON_DIR_MINIAT_CGATE=983db6   				# <-----  <MODIFICABLE>
 # NOM_CEL=Sams_Viejo
 # NOM_CEL=Home_DCIM
 
-# NOM_CEL=Fot_BB_tmp
-
 # NOM_CEL=Home_Fot_Canon_tmp
 
 # NOM_CEL=16GB_Lenta
 #
-# NOM_CEL=Fot_BB_tmp
+# 
 # NOM_CEL=Sams_Viejo
 # 
 # NOM_CEL=Caso_Pru_1_5
@@ -133,9 +131,13 @@ PATRON_DIR_MINIAT_CGATE=983db6   				# <-----  <MODIFICABLE>
  
 # NOM_CEL=Caso_Pru_1_5
 # NOM_CEL=Fot_XT910_tmp
-# NOM_CEL=Del_Blu
+# 
 # NOM_CEL=SDHC1_Basil
-NOM_CEL=Fot_XT910_tmp
+# NOM_CEL=Fot_XT910_tmp
+# NOM_CEL=Sams_Viejo
+# NOM_CEL=Fot_BB_tmp
+# NOM_CEL=Del_Blu
+NOM_CEL=Fotos_AR
 #-------------------------------------------------------------------------------
 #    C E L U L A R
 # DIRECTORIO que contiene archivos de fotos y videos copiados desde el Celular
@@ -163,7 +165,7 @@ NOM_CEL=Fot_XT910_tmp
 # DIR_FILES_COPIADOS_DEL_CEL=/media/CGate/public/2018-04-27_Back_Samsung_Viejo_TMP
 # DIR_FILES_COPIADOS_DEL_CEL=/home/badubko/Pictures/DCIM
 # DIR_FILES_COPIADOS_DEL_CEL=/home/badubko/Pictures/Fotos_XT910_tmp
-# DIR_FILES_COPIADOS_DEL_CEL=/home/badubko/Pictures/Fotos_BB_tmp
+# 
 # DIR_FILES_COPIADOS_DEL_CEL=/media/CGate/public/2018-04-24_Fotos_SD_Cel_Samsung_TMP
 
 # DIR_FILES_COPIADOS_DEL_CEL="/home/badubko/Pictures/Fotos_Samsung_tmp"
@@ -182,7 +184,9 @@ NOM_CEL=Fot_XT910_tmp
 # DIR_FILES_COPIADOS_DEL_CEL=/home/badubko/tmp_XT910_back
 # DIR_FILES_COPIADOS_DEL_CEL=/home/badubko/20170317_Back_Fotos_SD 
 # DIR_FILES_COPIADOS_DEL_CEL=/media/CGate/public/2017-07-05_SDHC1_Basil_Back
-DIR_FILES_COPIADOS_DEL_CEL=/media/CGate/public/Pictures_Obsoleto/Fotos_XT910_tmp
+# DIR_FILES_COPIADOS_DEL_CEL=/media/CGate/public/Pictures_Obsoleto/Fotos_Samsung_tmp
+# DIR_FILES_COPIADOS_DEL_CEL=/home/badubko/Pictures/2018-04-16_BLU_SD_TMP
+DIR_FILES_COPIADOS_DEL_CEL=/media/CGate/public/Fotos_AR
 #-------------------------------------------------------------------------------------------------------
 
 #--------------------------------------------------------------------------------------------------------
