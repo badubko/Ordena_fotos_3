@@ -136,8 +136,9 @@ PATRON_DIR_MINIAT_CGATE=983db6   				# <-----  <MODIFICABLE>
 # NOM_CEL=Fot_XT910_tmp
 # NOM_CEL=Sams_Viejo
 # NOM_CEL=Fot_BB_tmp
-# NOM_CEL=Del_Blu
-NOM_CEL=Fotos_AR2
+#
+# NOM_CEL=Fotos_AR2
+NOM_CEL=Del_Blu
 #-------------------------------------------------------------------------------
 #    C E L U L A R
 # DIRECTORIO que contiene archivos de fotos y videos copiados desde el Celular
@@ -151,8 +152,6 @@ NOM_CEL=Fotos_AR2
 # OOOJJJJOOOO con esto!!! <-----------------
 # 
 #        # <-----  <MODIFICABLE>
-
-# DIR_FILES_COPIADOS_DEL_CEL=/media/badubko/MICRO_SD_2/DCIM/Camera
 
 # DIR_FILES_COPIADOS_DEL_CEL=/media/CGate/public/20170809_16GB_Lenta_Back  # <-----  <MODIFICABLE>
 
@@ -186,7 +185,8 @@ NOM_CEL=Fotos_AR2
 # DIR_FILES_COPIADOS_DEL_CEL=/media/CGate/public/2017-07-05_SDHC1_Basil_Back
 # DIR_FILES_COPIADOS_DEL_CEL=/media/CGate/public/Pictures_Obsoleto/Fotos_Samsung_tmp
 # DIR_FILES_COPIADOS_DEL_CEL=/home/badubko/Pictures/2018-04-16_BLU_SD_TMP
-DIR_FILES_COPIADOS_DEL_CEL=/media/CGate/public/Fotos_AR2
+# DIR_FILES_COPIADOS_DEL_CEL=/media/CGate/public/Fotos_AR2
+DIR_FILES_COPIADOS_DEL_CEL=/media/badubko/MICRO_SD_2/DCIM/Camera
 #-------------------------------------------------------------------------------------------------------
 
 #--------------------------------------------------------------------------------------------------------
