@@ -119,10 +119,10 @@ printf "              Total= %5s\n\n" $[${AGR_A_ESTR_TEMP}+${NO_ACCION}+${AGR_A_
 printf "TOT Tipo Foto      : %5s\n"	  ${Tipo_Foto}
 printf "TOT Tipo Video     : %5s\n\n" ${Tipo_Video}
 
-printf "                 Procesados       Agregados a ET\n"
-printf "Casos Canon    : %5s               %5s\n"		${Tot_Tipo_Canon} 		${Tipo_Canon}
-printf "Casos General  : %5s               %5s\n"		${Tot_Tipo_General} 	${Tipo_General}
-printf "Casos Otra_cosa: %5s               %5s\n\n"		${Tot_Tipo_Otra_Cosa} 	${Tipo_Otra_Cosa}
+printf "                     Procesados       Agregados a ET\n"
+printf "Casos Canon        : %5s               %5s\n"		${Tot_Tipo_Canon} 		${Tipo_Canon}
+printf "Casos General      : %5s               %5s\n"		${Tot_Tipo_General} 	${Tipo_General}
+printf "Casos Otra_cosa    : %5s               %5s\n\n"		${Tot_Tipo_Otra_Cosa} 	${Tipo_Otra_Cosa}
 printf "TOT Det por fecha  : %5s\n\n"	${Det_por_fecha}
 
 fi
