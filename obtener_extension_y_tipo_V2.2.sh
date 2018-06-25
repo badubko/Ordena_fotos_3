@@ -58,11 +58,11 @@ else #2
       grep -q -e "${str_patron_gral}" <<<${FNAME^^}
       if [ $? = "0" ] 	#1	# Es tipo General 
       then
-       TIPO_NOM_ARCH="GENERAL"
-       let Tot_Tipo_Otra_Cosa++
-      else  #1
-       TIPO_NOM_ARCH="OTRA_COSA" 
-       let Tot_Tipo_General++
+		TIPO_NOM_ARCH="GENERAL"
+		let Tot_Tipo_General++
+       else  #1
+		TIPO_NOM_ARCH="OTRA_COSA" 
+		let Tot_Tipo_Otra_Cosa++
       fi  #1
 fi #2	
 	
