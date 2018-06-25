@@ -53,16 +53,16 @@ grep -q -e "$str_40\|$str_41\|$str_42\|$str_43\|$str_44\|$str_45\|$str_46\|$str_
 if [ $? = "0" ] #2 		# Es tipo CANON?
 then
        TIPO_NOM_ARCH="CANON"   
-#       let CANT_CANON++
+       let Tot_Tipo_Canon++
 else #2
       grep -q -e "${str_patron_gral}" <<<${FNAME^^}
       if [ $? = "0" ] 	#1	# Es tipo General 
       then
        TIPO_NOM_ARCH="GENERAL"
-#       let CANT_GENERAL++
+       let Tot_Tipo_Otra_Cosa++
       else  #1
        TIPO_NOM_ARCH="OTRA_COSA" 
-#       let CANT_OTRA_COSA++
+       let Tot_Tipo_General++
       fi  #1
 fi #2	
 	

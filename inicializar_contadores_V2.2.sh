@@ -82,6 +82,10 @@ let Tipo_Canon=0
 let Tipo_General=0
 let Tipo_Otra_Cosa=0
 
+let Tot_Tipo_Canon=0        
+let Tot_Tipo_General=0
+let Tot_Tipo_Otra_Cosa=0
+
 let Det_por_fecha=0       # Contabilizamos para ver realmente cuantos casos de esto hubo
 let Det_por_tamano=0
 
