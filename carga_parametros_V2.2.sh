@@ -185,8 +185,9 @@ NOM_CEL=Del_Blu
 # DIR_FILES_COPIADOS_DEL_CEL=/media/CGate/public/2017-07-05_SDHC1_Basil_Back
 # DIR_FILES_COPIADOS_DEL_CEL=/media/CGate/public/Pictures_Obsoleto/Fotos_Samsung_tmp
 # DIR_FILES_COPIADOS_DEL_CEL=/home/badubko/Pictures/2018-04-16_BLU_SD_TMP
-# DIR_FILES_COPIADOS_DEL_CEL=/media/CGate/public/Fotos_AR2
-DIR_FILES_COPIADOS_DEL_CEL=/media/badubko/MICRO_SD_2/DCIM/Camera
+# 
+# DIR_FILES_COPIADOS_DEL_CEL=/media/badubko/MICRO_SD_2/WhatsApp/Media/Images
+DIR_FILES_COPIADOS_DEL_CEL=/media/CGate/public/Del_Blu_Wh_MICRO_SD_2
 #-------------------------------------------------------------------------------------------------------
 
 #--------------------------------------------------------------------------------------------------------
