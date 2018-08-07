@@ -138,7 +138,13 @@ then
    exit
 fi
 
-PARMS_A_INCLUIR=carga_parametros_V2.2.sh		# <-----  <MODIFICABLE>
+# La version del archivo "carga_parametros" es el mismo que el main
+# y la obtenemos a partir del mismo
+
+VER_PARM=${0##*_V}
+VER_PARM=${VER_PARM%.sh*}
+
+PARMS_A_INCLUIR=carga_parametros_V${VER_PARM}.sh		
 
 
 if [ ! -f  "${INSTALL_DIR}/${PARMS_A_INCLUIR}" ]
@@ -146,6 +152,10 @@ then
 	echo "El MODULO ${INSTALL_DIR}/${PARMS_A_INCLUIR} NO existe"
 	exit
 fi
+
+#  echo "${PARMS_A_INCLUIR}"
+#  echo "${INSTALL_DIR}/${PARMS_A_INCLUIR}"
+#  exit
 
 source "${INSTALL_DIR}/${PARMS_A_INCLUIR}"
 #-------------------------------------------------------------------------------

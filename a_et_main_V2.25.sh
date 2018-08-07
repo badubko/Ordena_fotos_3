@@ -115,7 +115,10 @@
 #			25/05/18 14:27:38	Modificado caso_general 
 #			26/05/18 23:51:49	En regla EQ0_SI_SI_NO  se comento la linea 
 #								#            let AGR_A_NO_COPIAR++
-#	V2.2	11/06/18 00:15:49	Nuevo main sin carga de funcionescat ${LISTA_FUNCIONES[a_nc]} "a_nc_main_V2.2.sh"  >a_nc_V2.2.sh
+#	V2.2	11/06/18 00:15:49	Nuevo main sin carga de funciones
+#								cat ${LISTA_FUNCIONES[a_nc]} "a_nc_main_V2.2.sh"  >a_nc_V2.2.sh
+#   V2.3	06/08/18 16:31:16	Futura version donde se averigua la version de carga_parametros
+#								sacandola del mail
 #--------------------------------------------------------------------------------
 caso_canon_u_otra_cosa ()
 #-------------------------------------------------------------------------------
@@ -260,7 +263,13 @@ then
    exit
 fi
 
-PARMS_A_INCLUIR=carga_parametros_V2.2.sh		# <-----  <MODIFICABLE>
+# La version del archivo "carga_parametros" es el mismo que el main
+# y la obtenemos a partir del mismo
+
+VER_PARM=${0##*_V}
+VER_PARM=${VER_PARM%.sh*}
+
+PARMS_A_INCLUIR=carga_parametros_V${VER_PARM}.sh		
 
 
 if [ ! -f  "${INSTALL_DIR}/${PARMS_A_INCLUIR}" ]
@@ -269,10 +278,15 @@ then
 	exit
 fi
 
+#  echo "${PARMS_A_INCLUIR}"
+#  echo "${INSTALL_DIR}/${PARMS_A_INCLUIR}"
+#  exit
+
+
 source "${INSTALL_DIR}/${PARMS_A_INCLUIR}"
-#-------------------------------------------------------------------------------
 
 carga_parametros							#--------->>>#
+#-------------------------------------------------------------------------------
 
 carga_patrones								#--------->>>#
 
