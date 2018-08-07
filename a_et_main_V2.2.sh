@@ -277,10 +277,10 @@ then
 	echo "El MODULO ${INSTALL_DIR}/${PARMS_A_INCLUIR} NO existe"
 	exit
 fi
-echo "${PARMS_A_INCLUIR}"
-echo "${INSTALL_DIR}/${PARMS_A_INCLUIR}"
 
-exit
+#  echo "${PARMS_A_INCLUIR}"
+#  echo "${INSTALL_DIR}/${PARMS_A_INCLUIR}"
+
 
 source "${INSTALL_DIR}/${PARMS_A_INCLUIR}"
 
