@@ -113,23 +113,16 @@ PATRON_DIR_MINIAT_CGATE=983db6   				# <-----  <MODIFICABLE>
 #
 # NOM_CEL=SDHC1_Basil
 
-# NOM_CEL=Caso_Pru_1_5
-
-# NOM_CEL=16GB_Lenta
 # NOM_CEL=Sams_Viejo
 # NOM_CEL=Home_DCIM
 
 # NOM_CEL=Home_Fot_Canon_tmp
 
 # NOM_CEL=16GB_Lenta
-#
 # 
 # NOM_CEL=Sams_Viejo
 # 
-# NOM_CEL=Caso_Pru_1_5
-# NOM_CEL=Del_Blu
- 
-# NOM_CEL=Caso_Pru_1_5
+# 
 # NOM_CEL=Fot_XT910_tmp
 # 
 # NOM_CEL=SDHC1_Basil
@@ -137,8 +130,9 @@ PATRON_DIR_MINIAT_CGATE=983db6   				# <-----  <MODIFICABLE>
 # NOM_CEL=Sams_Viejo
 # NOM_CEL=Fot_BB_tmp
 #
-# NOM_CEL=Fotos_AR2
-NOM_CEL=Del_Blu
+# NOM_CEL=Del_Blu
+#
+NOM_CEL=Caso_Pru_1_5
 #-------------------------------------------------------------------------------
 #    C E L U L A R
 # DIRECTORIO que contiene archivos de fotos y videos copiados desde el Celular
@@ -158,7 +152,6 @@ NOM_CEL=Del_Blu
 # DIR_FILES_COPIADOS_DEL_CEL=/home/badubko/Downloads/2018-04-24_BLU_SD_TMP
 
 # DIR_FILES_COPIADOS_DEL_CEL=/media/badubko/SDHC1_BASIL/DCIM
-# DIR_FILES_COPIADOS_DEL_CEL=/home/badubko/Work_Dir_Ordena_Fotos_Cel/Para_Caso_Pru_1_5
 # DIR_FILES_COPIADOS_DEL_CEL=/media/badubko/16GB_LENTA/DCIM
 
 # DIR_FILES_COPIADOS_DEL_CEL=/media/CGate/public/2018-04-27_Back_Samsung_Viejo_TMP
@@ -179,7 +172,7 @@ NOM_CEL=Del_Blu
 # DIR_FILES_COPIADOS_DEL_CEL=/media/CGate/public/Pictures_Obsoleto/Fotos_XT910_tmp
 # DIR_FILES_COPIADOS_DEL_CEL=/media/CGate/public/2017-07-05_SDHC1_Basil_Back
 
-# DIR_FILES_COPIADOS_DEL_CEL=/home/badubko/Work_Dir_Ordena_Fotos_Cel/Para_Caso_Pru_1_5
+# 
 # DIR_FILES_COPIADOS_DEL_CEL=/home/badubko/tmp_XT910_back
 # DIR_FILES_COPIADOS_DEL_CEL=/home/badubko/20170317_Back_Fotos_SD 
 # DIR_FILES_COPIADOS_DEL_CEL=/media/CGate/public/2017-07-05_SDHC1_Basil_Back
@@ -187,7 +180,8 @@ NOM_CEL=Del_Blu
 # DIR_FILES_COPIADOS_DEL_CEL=/home/badubko/Pictures/2018-04-16_BLU_SD_TMP
 # DIR_FILES_COPIADOS_DEL_CEL=/media/CGate/public/Fotos_AR2
 # DIR_FILES_COPIADOS_DEL_CEL=/media/badubko/MICRO_SD_2/DCIM/Camera
-DIR_FILES_COPIADOS_DEL_CEL=/media/CGate/public/20180801_Del_Blu_SD2_WH
+# DIR_FILES_COPIADOS_DEL_CEL=/media/CGate/public/20180801_Del_Blu_SD2_WH
+DIR_FILES_COPIADOS_DEL_CEL=/home/badubko/Work_Dir_Ordena_Fotos_Cel/Para_Caso_Pru_1_5
 #-------------------------------------------------------------------------------------------------------
 
 #--------------------------------------------------------------------------------------------------------
