@@ -138,7 +138,6 @@ then
    exit
 fi
 
-# PARMS_A_INCLUIR=carga_parametros_V2.2.sh		# <-----  <MODIFICABLE>
 # La version del archivo "carga_parametros" es el mismo que el main
 # y la obtenemos a partir del mismo
 
