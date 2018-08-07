@@ -1,6 +1,7 @@
 #! /bin/bash
 # bob..... "El constructor" Hahahaha
 
+
 linea_guiones ()
 {
 echo "#----------------------------------------------------------------"  
@@ -8,28 +9,31 @@ echo "#----------------------------------------------------------------"
 
 declare -A LISTA_FUNCIONES MAIN OUT_FILE
 
-LISTA_FUNCIONES[a_et]="crea_listado_repositorio_V2.2.sh \
-                       listar_modulos_V2.2.sh \
-						verif_dirs_y_files_V2.2.sh \
-						carga_patrones_V2.2.sh \
-						obtener_extension_y_tipo_V2.2.sh \
-						buscar_en_repositorio_V2.2.sh \
-						NC_en_mem_V2.2.sh \
-						generar_reporte_V2.2.sh \
-						inicializar_contadores_V2.2.sh"
-						
-LISTA_FUNCIONES[a_nc]="crea_listado_repositorio_V2.2.sh \
-						listar_modulos_V2.2.sh \
-						verif_dirs_y_files_V2.2.sh \
-						carga_patrones_V2.2.sh \
-						obtener_extension_y_tipo_V2.2.sh \
-						buscar_en_repositorio_V2.2.sh \
-						NC_en_mem_V2.2.sh \
-						generar_reporte_V2.2.sh \
-						reporte_t_parc_V2.2.sh \
-						inicializar_contadores_V2.2.sh"
-MAIN[a_et]=a_et_main_V2.2.sh
-MAIN[a_nc]=a_nc_main_V2.2.sh
+VERS_MODS="2.2"
+
+LISTA_FUNCIONES[a_et]="crea_listado_repositorio_V${VERS_MODS}.sh \
+                       listar_modulos_V${VERS_MODS}.sh \
+						V${VERS_MODS}.sh \
+						carga_patrones_V${VERS_MODS}.sh \
+						obtener_extension_y_tipo_V${VERS_MODS}.sh \
+						buscar_en_repositorio_V${VERS_MODS}.sh \
+						NC_en_mem_V${VERS_MODS}.sh \
+						generar_reporte_V${VERS_MODS}.sh \
+						inicializar_contadores_V${VERS_MODS}.sh"
+												
+LISTA_FUNCIONES[a_nc]="crea_listado_repositorio_V${VERS_MODS}.sh \
+						listar_modulos_V${VERS_MODS}.sh \
+						verif_dirs_y_files_V${VERS_MODS}.sh \
+						carga_patrones_V${VERS_MODS}.sh \
+						obtener_extension_y_tipo_V${VERS_MODS}.sh \
+						buscar_en_repositorio_V${VERS_MODS}.sh \
+						NC_en_mem_V${VERS_MODS}.sh \
+						generar_reporte_V${VERS_MODS}.sh \
+						reporte_t_parc_V${VERS_MODS}.sh \
+						inicializar_contadores_V${VERS_MODS}.sh"
+												
+MAIN[a_et]=a_et_main_V${VERS_MODS}.sh
+MAIN[a_nc]=a_nc_main_V${VERS_MODS}.sh
 
 OUT_FILE[a_et]=${MAIN[a_et]/_main/} # Quitamos el "_main"
 OUT_FILE[a_nc]=${MAIN[a_nc]/_main/}
