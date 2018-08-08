@@ -144,9 +144,15 @@ fi
 # VER_PARM=${0##*_V}
 # VER_PARM=${VER_PARM%.sh*}
 
-# PARMS_A_INCLUIR=carga_parametros_V${VER_PARM}.sh		
+# PARMS_A_INCLUIR=carga_parametros_V${VER_PARM}.sh	
+	
+# En vez de obtener la version del run string, "bob" la sustituye en el siguiente
+# renglon al integrar el "ejecutable"
+#								  
+#		   v-------v justo aca!
+VERS_MODS="XYZVVVZXY"
 
-PARMS_A_INCLUIR=carga_parametros_VXYZVVVZXY.sh
+PARMS_A_INCLUIR=carga_parametros_V${VERS_MODS}.sh
 
 if [ ! -f  "${INSTALL_DIR}/${PARMS_A_INCLUIR}" ]
 then
@@ -157,6 +163,7 @@ fi
 #  echo "${PARMS_A_INCLUIR}"
 #  echo "${INSTALL_DIR}/${PARMS_A_INCLUIR}"
 #  exit
+
 
 source "${INSTALL_DIR}/${PARMS_A_INCLUIR}"
 #-------------------------------------------------------------------------------
