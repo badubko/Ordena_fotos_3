@@ -266,10 +266,13 @@ fi
 # La version del archivo "carga_parametros" es el mismo que el main
 # y la obtenemos a partir del mismo
 
-VER_PARM=${0##*_V}
-VER_PARM=${VER_PARM%.sh*}
+# VER_PARM=${0##*_V}
+# VER_PARM=${VER_PARM%.sh*}
 
-PARMS_A_INCLUIR=carga_parametros_V${VER_PARM}.sh		
+# En vez de obtener la version del run string, "bob" la sustituye en el siguiente
+# renglon al integrar el "ejecutable"
+
+PARMS_A_INCLUIR=carga_parametros_VXYZVVVZXY.sh		
 
 
 if [ ! -f  "${INSTALL_DIR}/${PARMS_A_INCLUIR}" ]
@@ -278,9 +281,9 @@ then
 	exit
 fi
 
-#  echo "${PARMS_A_INCLUIR}"
-#  echo "${INSTALL_DIR}/${PARMS_A_INCLUIR}"
-#  exit
+  echo "${PARMS_A_INCLUIR}"
+  echo "${INSTALL_DIR}/${PARMS_A_INCLUIR}"
+  exit
 
 
 source "${INSTALL_DIR}/${PARMS_A_INCLUIR}"

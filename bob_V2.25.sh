@@ -58,7 +58,8 @@ else
     BRANCH="NO-git"
 fi
 
-DIR_REF=${HOME}"/Documents/Ordena_Fotos_Cel"
+DIR_REF=${HOME}"/Documents/Ordena_Fotos_Cel" # Esto tal vez deberia referirse
+											 # a $PWD...
 
 if [ $# = 0 ]
 then
@@ -129,7 +130,15 @@ fi
 
 
 # Aca contruimos el main
-cat ${LISTA_FUNCIONES[${CUAL_MAIN}]} ${MAIN[${CUAL_MAIN}]}  >>${OUT_FILE[${CUAL_MAIN}]}
+# Primero incluimos los modulos (funciones)
+cat ${LISTA_FUNCIONES[${CUAL_MAIN}]}   >>${OUT_FILE[${CUAL_MAIN}]}
+
+# Por ultimo incluimos el mail, insertando la version correspondiente 
+# para el archivo parametros
+# Esto es para que se cargue en cada ejecucion el archivo de parametros.
+
+sed "s/XYZVVVZXY/${VERS_MODS}/" <${MAIN[${CUAL_MAIN}]}  >>${OUT_FILE[${CUAL_MAIN}]}
+
 
 # Le sacamos permiso de w para que nadie edite este file
 chmod 555 ${OUT_FILE[${CUAL_MAIN}]}
