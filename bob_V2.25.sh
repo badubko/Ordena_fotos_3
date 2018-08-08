@@ -92,6 +92,7 @@ esac
 	
 for A_INCLUIR in ${LISTA_FUNCIONES[${CUAL_MAIN}]} ${MAIN[${CUAL_MAIN}]}
 do
+	echo "A incluir:  ${A_INCLUIR}"
 	if [ ! -f  "${A_INCLUIR}" ]
 	then
 		echo "El MODULO ${A_INCLUIR} NO existe"
