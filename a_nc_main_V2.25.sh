@@ -141,11 +141,12 @@ fi
 # La version del archivo "carga_parametros" es el mismo que el main
 # y la obtenemos a partir del mismo
 
-VER_PARM=${0##*_V}
-VER_PARM=${VER_PARM%.sh*}
+# VER_PARM=${0##*_V}
+# VER_PARM=${VER_PARM%.sh*}
 
-PARMS_A_INCLUIR=carga_parametros_V${VER_PARM}.sh		
+# PARMS_A_INCLUIR=carga_parametros_V${VER_PARM}.sh		
 
+PARMS_A_INCLUIR=carga_parametros_VXYZVVVZXY.sh
 
 if [ ! -f  "${INSTALL_DIR}/${PARMS_A_INCLUIR}" ]
 then
