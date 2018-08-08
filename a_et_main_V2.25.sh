@@ -275,6 +275,8 @@ fi
 #		   v-------v justo aca!
 VERS_MODS="XYZVVVZXY"
 
+configura_parametros
+
 PARMS_A_INCLUIR=carga_parametros_V${VERS_MODS}.sh		
 
 
@@ -288,13 +290,12 @@ fi
 #  echo "${INSTALL_DIR}/${PARMS_A_INCLUIR}"
 
 
-
 source "${INSTALL_DIR}/${PARMS_A_INCLUIR}"
 
 carga_parametros							#--------->>>#
 
-# echo ${REPOSITORIO[@]}
-# exit 
+ echo ${REPOSITORIO[@]}
+ exit 
 #-------------------------------------------------------------------------------
 
 carga_patrones								#--------->>>#
