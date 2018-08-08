@@ -14,7 +14,7 @@ echo "#----------------------------------------------------------------"
 
 declare -A LISTA_FUNCIONES MAIN OUT_FILE
 
-VERS_MODS="2.25"
+VERS_MODS="2.3"
 
 LISTA_FUNCIONES[a_et]="crea_listado_repositorio_V${VERS_MODS}.sh \
                        listar_modulos_V${VERS_MODS}.sh \
