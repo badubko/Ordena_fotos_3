@@ -80,46 +80,36 @@
 #							
 #-----------------------------------------------------------------------
 
-#------------------------------------------------------------------------------
-informar_revisar ()
-#------------------------------------------------------------------------------
-{
-# MEjorar Formato 
 
-    echo "${NOM_ABREV}: ${INF_REV} ${FNAME} ${REGLA}    ---> Informar/Revisar" >>${ARCHIVO_LOG}
-#    printf "\n" >>${ARCHIVO_LOG}  # Se puso al comienzo de cada iteracion.
-
-#    echo "Archivo: $FNAME $REGLA"
-#    echo "Tamaño: $TAM  EN_REPOS: $EN_REPOS EN_NO_COPIAR: $EN_NO_COPIAR"
-return
-}
 #------------------------------------------------------------------------------
-agregar_a_no_copiar()
+# agregar_a_no_copiar()
+# 08/08/18 14:16:36		Estas lineas se comentan por las dudas si hay que volver
+#						atras. Estan ahora en el archivo func_vs_main
 #------------------------------------------------------------------------------
-{
+#{
 # Unificar formato con informar_revisar
 #
 # echo $FNAME "# $AGR_A_NO_COPIAR  $REGLA  $NOM_ABREV $RUN_DATE" | tee -a >>$LISTA_FILES_NO_COPIAR
 
-if [ "${Fecha_file_cel}" = "0" ]  #3
-then
-    if [ ${TIPO_NOM_ARCH} = "GENERAL" ] #2
-    then
-		Fecha_file_cel="En_Nombre"
-    else   	#2
-        if [ ${TAM} = "GT0" ] #1
-        then
-			Fecha_file_cel="$( obtener_fecha ${FNAME_FULL} )" #--------->>>#
-	    else #1
-			Fecha_file_cel="????"
-		fi  #1
-	fi	#2
-fi #3
+#if [ "${Fecha_file_cel}" = "0" ]  #3
+#then
+#    if [ ${TIPO_NOM_ARCH} = "GENERAL" ] #2
+#    then
+#		Fecha_file_cel="En_Nombre"
+#    else   	#2
+#        if [ ${TAM} = "GT0" ] #1
+#        then
+#			Fecha_file_cel="$( obtener_fecha ${FNAME_FULL} )" #--------->>>#
+#	    else #1
+#			Fecha_file_cel="????"
+#		fi  #1
+#	fi	#2
+#fi #3
 
-printf "%s  %s  %s  %s\n" ${FNAME} ${Tam_file_cel} ${Fecha_file_cel} "# ${REGLA}  ${NOM_ABREV} ${RUN_DATE}" >>${LISTA_FILES_NO_COPIAR}
+#printf "%s  %s  %s  %s\n" ${FNAME} ${Tam_file_cel} ${Fecha_file_cel} "# ${REGLA}  ${NOM_ABREV} ${RUN_DATE}" >>${LISTA_FILES_NO_COPIAR}
 
-return
-}
+#return
+#}
 
 #------------------------------------------------------------------------------
 Tinicio=$(date +%s)
@@ -141,11 +131,20 @@ fi
 # La version del archivo "carga_parametros" es el mismo que el main
 # y la obtenemos a partir del mismo
 
-VER_PARM=${0##*_V}
-VER_PARM=${VER_PARM%.sh*}
+# VER_PARM=${0##*_V}
+# VER_PARM=${VER_PARM%.sh*}
 
-PARMS_A_INCLUIR=carga_parametros_V${VER_PARM}.sh		
+# PARMS_A_INCLUIR=carga_parametros_V${VER_PARM}.sh	
+	
+# En vez de obtener la version del run string, "bob" la sustituye en el siguiente
+# renglon al integrar el "ejecutable"
+#								  
+#		   v-------v justo aca!
+VERS_MODS="XYZVVVZXY"
 
+configura_parametros
+
+PARMS_A_INCLUIR=carga_parametros_V${VERS_MODS}.sh
 
 if [ ! -f  "${INSTALL_DIR}/${PARMS_A_INCLUIR}" ]
 then
@@ -156,6 +155,7 @@ fi
 #  echo "${PARMS_A_INCLUIR}"
 #  echo "${INSTALL_DIR}/${PARMS_A_INCLUIR}"
 #  exit
+
 
 source "${INSTALL_DIR}/${PARMS_A_INCLUIR}"
 #-------------------------------------------------------------------------------

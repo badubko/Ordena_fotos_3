@@ -14,7 +14,7 @@ echo "#----------------------------------------------------------------"
 
 declare -A LISTA_FUNCIONES MAIN OUT_FILE
 
-VERS_MODS="2.25"
+VERS_MODS="2.3"
 
 LISTA_FUNCIONES[a_et]="crea_listado_repositorio_V${VERS_MODS}.sh \
                        listar_modulos_V${VERS_MODS}.sh \
@@ -24,6 +24,8 @@ LISTA_FUNCIONES[a_et]="crea_listado_repositorio_V${VERS_MODS}.sh \
 						buscar_en_repositorio_V${VERS_MODS}.sh \
 						NC_en_mem_V${VERS_MODS}.sh \
 						generar_reporte_V${VERS_MODS}.sh \
+						func_vs_main_V${VERS_MODS}.sh \
+						config_param_V${VERS_MODS}.sh \
 						inicializar_contadores_V${VERS_MODS}.sh"
 												
 LISTA_FUNCIONES[a_nc]="crea_listado_repositorio_V${VERS_MODS}.sh \
@@ -35,6 +37,8 @@ LISTA_FUNCIONES[a_nc]="crea_listado_repositorio_V${VERS_MODS}.sh \
 						NC_en_mem_V${VERS_MODS}.sh \
 						generar_reporte_V${VERS_MODS}.sh \
 						reporte_t_parc_V${VERS_MODS}.sh \
+						func_vs_main_V${VERS_MODS}.sh \
+						config_param_V${VERS_MODS}.sh \
 						inicializar_contadores_V${VERS_MODS}.sh"
 												
 MAIN[a_et]=a_et_main_V${VERS_MODS}.sh
@@ -58,7 +62,8 @@ else
     BRANCH="NO-git"
 fi
 
-DIR_REF=${HOME}"/Documents/Ordena_Fotos_Cel"
+DIR_REF=${HOME}"/Documents/Ordena_Fotos_Cel" # Esto tal vez deberia referirse
+											 # a $PWD...
 
 if [ $# = 0 ]
 then
@@ -129,7 +134,15 @@ fi
 
 
 # Aca contruimos el main
-cat ${LISTA_FUNCIONES[${CUAL_MAIN}]} ${MAIN[${CUAL_MAIN}]}  >>${OUT_FILE[${CUAL_MAIN}]}
+# Primero incluimos los modulos (funciones)
+cat ${LISTA_FUNCIONES[${CUAL_MAIN}]}   >>${OUT_FILE[${CUAL_MAIN}]}
+
+# Por ultimo incluimos el main, sustituyendo la version correspondiente 
+# para el archivo parametros
+# Esto es para que se cargue en cada ejecucion el archivo de parametros.
+
+sed "s/XYZVVVZXY/${VERS_MODS}/" <${MAIN[${CUAL_MAIN}]}  >>${OUT_FILE[${CUAL_MAIN}]}
+
 
 # Le sacamos permiso de w para que nadie edite este file
 chmod 555 ${OUT_FILE[${CUAL_MAIN}]}

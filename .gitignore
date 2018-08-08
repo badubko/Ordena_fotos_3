@@ -1,7 +1,10 @@
 # Mains integrados que se ignoran
 
-a_et_V2.2.sh
+a_et_V2.3.sh
 
-a_nc_V2.2.sh
+a_nc_V2.3.sh
 
-datos_parametros_V2.25.sh
+datos_parametros_V2.3.sh
+
+carga_parametros_V2.3.sh
+

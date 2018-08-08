@@ -118,132 +118,8 @@
 #	V2.2	11/06/18 00:15:49	Nuevo main sin carga de funciones
 #								cat ${LISTA_FUNCIONES[a_nc]} "a_nc_main_V2.2.sh"  >a_nc_V2.2.sh
 #   V2.3	06/08/18 16:31:16	Futura version donde se averigua la version de carga_parametros
-#								sacandola del mail
+#								sacandola del main
 #--------------------------------------------------------------------------------
-caso_canon_u_otra_cosa ()
-#-------------------------------------------------------------------------------
-{
-# Caso Canon, Canon like  y otros achivos que no tengan fecha en el nombre...
-# Separamos en tipo FOTO y VIDEO solo para preveer que se tenga q usar algun otro metodo para obtener la fecha.
-
-# echo "${FNAME}  es Canon like u otra cosa "
-
-	
-	     #  Si ya habiamos obtenido la fecha al comparar files
-	     #  ya tenemos  2017-04-25_HH:MM:SS porque se tuvo que recurrir a comparar fechas; 
-		 #  recortamos solo la fecha
-
-		if [ ${Fecha_file_cel} =  "0"  ]          
-		then
-			# Si no tenemos fecha, obtenerla.
-			Fecha_file_cel="$( obtener_fecha ${FNAME_FULL} )"				
-		fi
-		if [ ${Fecha_file_cel} =  "????" ]	
-		then
-		    Dir_dest="Sin_Fecha"
-		else     
-            Dir_dest="${Fecha_file_cel%_*}"
-        fi
-       
-return
-}
-
-#-------------------------------------------------------------------------------
-caso_general ()
-#-------------------------------------------------------------------------------
-{
-# echo "Es de los generales sacar fecha del nombre"
-
-grep -q -e "$str_12\|$str_14\|$str_15" <<<${FNAME}
- if [ $? = "0" ]
- then
-	Dir_dest=$( /bin/sed 's/^\([0-9]\{4\}\)\([0-9]\{2\}\)/\1-\2-/' <<<${FNAME} )
-	Dir_dest=${Dir_dest:0:10} 
- else
-	# Eliminar prefijo tipo IMG, DSCN, etc ; convertir a AAAA-MM-DD y quedarnos con esos primeros 10 caract
-	#  Dir_dest=$( /bin/sed "$str_sustit" <<<${FNAME} |  /bin/sed 's/\([0-9]\{4\}\)\([0-9]\{2\}\)/\1-\2-/' | /usr/bin/cut -c1-10)
-    #  Dir_dest=$( /bin/sed "$str_sustit" <<<${FNAME} |  /bin/sed 's/\([0-9]\{4\}\)\([0-9]\{2\}\)/\1-\2-/' )
-    Dir_dest=$( /bin/sed -e "$str_sustit" -e 's/\([0-9]\{4\}\)\([0-9]\{2\}\)/\1-\2-/' <<<${FNAME}  )
-    Dir_dest=${Dir_dest:0:10} 
- fi
-
-
-return
-}
-
-#-------------------------------------------------------------------------------
-obtener_dir_dest ()
-#-------------------------------------------------------------------------------
-{
-  case ${TIPO_NOM_ARCH} in
-  CANON )
-	let Tipo_Canon++  	   
-	caso_canon_u_otra_cosa	#--------->>>#
-  ;;
-  OTRA_COSA )
-	let Tipo_Otra_Cosa++
-	caso_canon_u_otra_cosa	#--------->>>#
-  ;;
-  GENERAL )
-	let Tipo_General++	
-	caso_general			#--------->>>#
-  ;;
-  esac
-
-return
-}
-
-#-------------------------------------------------------------------------------
-agregar_a_estr_temp ()
-#-------------------------------------------------------------------------------
-{
-obtener_dir_dest
-	if [ ! -d "$ESTR_TEMP/$Dir_dest" ]
-	then
-	  mkdir "$ESTR_TEMP/$Dir_dest"
-	fi
-
-#		     echo "$ESTR_TEMP/$Dir_dest/$FNAME"
-#		     echo
-		     
-	 case ${TIPO_ARCH} in
-	 FOTO )
-	   cp -p $FNAME_FULL "$ESTR_TEMP/$Dir_dest/$FNAME"
-	 ;;
-	 VIDEO )
-	   echo "cp -p ${FNAME_FULL} ${ESTR_TEMP}/${Dir_dest}/${FNAME}"  >>${WORK_SCRIPT_VID}
-	 ;;
-	 * )
-	   echo  "${NOM_ABREV}: Paranoia check ${FNAME} tipo no previsto ${TIPO_ARCH}" 
-	 ;;
-	 esac               
-
-# Limpiar variables para la proxima vuelta, para cuando se determine el tipo de arch
-# tempranamente en buscar_en_repositorio
-return
-}
-#-------------------------------------------------------------------------------
-informar_revisar ()
-{
-
-#  Hasta tanto no se implemente el contador
-   echo "$NOM_ABREV: $INF_REV $FNAME $REGLA  Informar/Revisar" 	>>$ARCHIVO_LOG
-   printf "\n" 													>>$ARCHIVO_LOG
-
-return
-}
-#-------------------------------------------------------------------------------
-agregar_a_no_copiar()
-{
-# Unificar formato con informar_revisar
-#
-# En todos los casos de Fotos_cel_a_Estr_Temp el Tamaño sera "0" y la fecha "????"
-# debido a que SOLAMENTE se agregan a N/C los archivos de tamaño=0
-#
-printf "%s  %s  %s  %s\n" ${FNAME} ${Tam_file_cel} "????" "# ${AGR_A_NO_COPIAR}  ${REGLA}  ${NOM_ABREV} ${RUN_DATE}" >>$LISTA_FILES_NO_COPIAR
-
-return
-}
 
 #-------------------------------------------------------------------------------
 # Cuerpo programa principal
@@ -266,10 +142,18 @@ fi
 # La version del archivo "carga_parametros" es el mismo que el main
 # y la obtenemos a partir del mismo
 
-VER_PARM=${0##*_V}
-VER_PARM=${VER_PARM%.sh*}
+# VER_PARM=${0##*_V}
+# VER_PARM=${VER_PARM%.sh*}
 
-PARMS_A_INCLUIR=carga_parametros_V${VER_PARM}.sh		
+# En vez de obtener la version del run string, "bob" la sustituye en el siguiente
+# renglon al integrar el "ejecutable"
+#								  
+#		   v-------v justo aca!
+VERS_MODS="XYZVVVZXY"
+
+configura_parametros
+
+PARMS_A_INCLUIR=carga_parametros_V${VERS_MODS}.sh		
 
 
 if [ ! -f  "${INSTALL_DIR}/${PARMS_A_INCLUIR}" ]
@@ -280,12 +164,14 @@ fi
 
 #  echo "${PARMS_A_INCLUIR}"
 #  echo "${INSTALL_DIR}/${PARMS_A_INCLUIR}"
-#  exit
 
 
 source "${INSTALL_DIR}/${PARMS_A_INCLUIR}"
 
 carga_parametros							#--------->>>#
+
+# echo ${REPOSITORIO[@]}
+# exit 
 #-------------------------------------------------------------------------------
 
 carga_patrones								#--------->>>#
