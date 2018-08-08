@@ -283,9 +283,9 @@ then
 	exit
 fi
 
-  echo "${PARMS_A_INCLUIR}"
-  echo "${INSTALL_DIR}/${PARMS_A_INCLUIR}"
-  exit
+#  echo "${PARMS_A_INCLUIR}"
+#  echo "${INSTALL_DIR}/${PARMS_A_INCLUIR}"
+# exit
 
 
 source "${INSTALL_DIR}/${PARMS_A_INCLUIR}"
