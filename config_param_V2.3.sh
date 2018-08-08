@@ -16,19 +16,19 @@ configura_parametros ()
 # declare -A CP_LISTA_VARIABLES CP_IN_FILE CP_OUT_FILE
 
 LISTA_VARIABLES='REPOS_A_CONS= \
-					REGEN_LISTA_FILES_REP[1]= \
-					REGEN_LISTA_FILES_REP[0]= \
-					SOLO_REGEN_LISTA_FILES_REP[1]= \
-					SOLO_REGEN_LISTA_FILES_REP[0]= \
-					REPOSITORIO[0]= \
-					REPOSITORIO[1]= \
-					PREFIJO[0]= \
-					PREFIJO[1]= \
-					LISTA_DIRS[0]= \
-					LISTA_DIRS[1]= \
+					REGEN_LISTA_FILES_REP\[1\]= \
+					REGEN_LISTA_FILES_REP\[0\]= \
+					SOLO_REGEN_LISTA_FILES_REP\[1\]= \
+					SOLO_REGEN_LISTA_FILES_REP\[0\]= \
+					REPOSITORIO\[0\]= \
+					REPOSITORIO\[1\]= \
+					PREFIJO\[0\]= \
+					PREFIJO\[1\]= \
+					LISTA_DIRS\[0\]= \
+					LISTA_DIRS\[1\]= \
 					WORK_DIR= \
-					LISTA_FILES_REP[0] \
-					LISTA_FILES_REP[1] \
+					LISTA_FILES_REP\[0\] \
+					LISTA_FILES_REP\[1\] \
 					PATRON_DIR_MINIAT_CGATE= \
 					NOM_CEL= \
 					DIR_FILES_COPIADOS_DEL_CEL= \
@@ -102,11 +102,16 @@ fi
 #   echo "carga_parametros () {"							>>${CP_OUT_FILE}
   echo "# Variables incluidas:"				  	        >>${CP_OUT_FILE}
 
-#  for VARS_A_INCLUIR in ${LISTA_VARIABLES}
+#  for VARS_A_INCLUIR in "${LISTA_VARIABLES}"
 #  do
-#	printf "#                     %s\n" ${VARS_A_INCLUIR} 	>>${CP_OUT_FILE}
+     grep -v '^#.*' ${CP_IN_FILE} | grep  "${VARS_A_INCLUIR}" 	>>${CP_OUT_FILE}
+     printf "\n"												>>${CP_OUT_FILE}
+     
+#		printf "#                     %s\n" ${VARS_A_INCLUIR} 	>>${CP_OUT_FILE}
 #  done
-   grep -v -e '^#.*'  ${CP_IN_FILE} >>${CP_OUT_FILE}
+
+
+#    grep -v -e '^#.*'  ${CP_IN_FILE} >>${CP_OUT_FILE}
 
 linea_guiones 											>>${CP_OUT_FILE}
 printf "\n\n"											>>${CP_OUT_FILE}
