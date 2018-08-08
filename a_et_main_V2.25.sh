@@ -294,8 +294,8 @@ source "${INSTALL_DIR}/${PARMS_A_INCLUIR}"
 
 carga_parametros							#--------->>>#
 
- echo ${REPOSITORIO[@]}
- exit 
+# echo ${REPOSITORIO[@]}
+# exit 
 #-------------------------------------------------------------------------------
 
 carga_patrones								#--------->>>#
