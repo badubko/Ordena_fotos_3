@@ -108,21 +108,6 @@ fi
 #  done
    grep -v -e '^#.*'  ${CP_IN_FILE} >>${CP_OUT_FILE}
 
-
-
-# Aca contruimos el main
-# Primero incluimos los modulos (funciones)
-# cat ${LISTA_FUNCIONES[${CUAL_MAIN}]}   >>${CP_OUT_FILE}
-
-# Por ultimo incluimos el main, sustituyendo la version correspondiente 
-# para el archivo parametros
-# Esto es para que se cargue en cada ejecucion el archivo de parametros.
-
-# sed "s/XYZVVVZXY/${VERS_MODS}/" <${MAIN[${CUAL_MAIN}]}  >>${OUT_FILE[${CUAL_MAIN}]}
-
-# echo "return"											>>${CP_OUT_FILE}
-# echo "}"												>>${CP_OUT_FILE}
-
 linea_guiones 											>>${CP_OUT_FILE}
 printf "\n\n"											>>${CP_OUT_FILE}
 
