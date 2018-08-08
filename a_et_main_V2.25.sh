@@ -286,12 +286,15 @@ fi
 
 #  echo "${PARMS_A_INCLUIR}"
 #  echo "${INSTALL_DIR}/${PARMS_A_INCLUIR}"
-# exit
+
 
 
 source "${INSTALL_DIR}/${PARMS_A_INCLUIR}"
 
 carga_parametros							#--------->>>#
+
+# echo ${REPOSITORIO[@]}
+# exit 
 #-------------------------------------------------------------------------------
 
 carga_patrones								#--------->>>#
