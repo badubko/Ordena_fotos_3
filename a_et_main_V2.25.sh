@@ -272,9 +272,10 @@ fi
 # En vez de obtener la version del run string, "bob" la sustituye en el siguiente
 # renglon al integrar el "ejecutable"
 #								  
-#								  v-------v justo aca!
+#		   v-------v justo aca!
+VERS_MODS="XYZVVVZXY"
 
-PARMS_A_INCLUIR=carga_parametros_VXYZVVVZXY.sh		
+PARMS_A_INCLUIR=carga_parametros_V${VERS_MODS}.sh		
 
 
 if [ ! -f  "${INSTALL_DIR}/${PARMS_A_INCLUIR}" ]
