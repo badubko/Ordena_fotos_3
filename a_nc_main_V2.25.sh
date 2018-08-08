@@ -142,6 +142,8 @@ fi
 #		   v-------v justo aca!
 VERS_MODS="XYZVVVZXY"
 
+configura_parametros
+
 PARMS_A_INCLUIR=carga_parametros_V${VERS_MODS}.sh
 
 if [ ! -f  "${INSTALL_DIR}/${PARMS_A_INCLUIR}" ]

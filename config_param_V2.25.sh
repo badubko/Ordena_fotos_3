@@ -112,6 +112,6 @@ linea_guiones 											>>${CP_OUT_FILE}
 printf "\n\n"											>>${CP_OUT_FILE}
 
 # Le sacamos permiso de w para que nadie edite este file
-chmod 555 ${CP_OUT_FILE}
+chmod 444 ${CP_OUT_FILE}
 
 }
