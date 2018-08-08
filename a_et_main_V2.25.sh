@@ -271,6 +271,8 @@ fi
 
 # En vez de obtener la version del run string, "bob" la sustituye en el siguiente
 # renglon al integrar el "ejecutable"
+#								  
+#								  v-------v justo aca!
 
 PARMS_A_INCLUIR=carga_parametros_VXYZVVVZXY.sh		
 

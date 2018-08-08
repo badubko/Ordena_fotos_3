@@ -133,7 +133,7 @@ fi
 # Primero incluimos los modulos (funciones)
 cat ${LISTA_FUNCIONES[${CUAL_MAIN}]}   >>${OUT_FILE[${CUAL_MAIN}]}
 
-# Por ultimo incluimos el mail, insertando la version correspondiente 
+# Por ultimo incluimos el main, sustituyendo la version correspondiente 
 # para el archivo parametros
 # Esto es para que se cargue en cada ejecucion el archivo de parametros.
 
