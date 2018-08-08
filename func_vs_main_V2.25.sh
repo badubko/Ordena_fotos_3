@@ -120,7 +120,7 @@ return
 agregar_a_no_copiar()
 {
 # Unificar formato con informar_revisar
-#
+#  
 # En todos los casos de Fotos_cel_a_Estr_Temp el Tamaño sera "0" y la fecha "????"
 # debido a que SOLAMENTE se agregan a N/C los archivos de tamaño=0
 #
