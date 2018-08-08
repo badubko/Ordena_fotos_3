@@ -118,7 +118,7 @@
 #	V2.2	11/06/18 00:15:49	Nuevo main sin carga de funciones
 #								cat ${LISTA_FUNCIONES[a_nc]} "a_nc_main_V2.2.sh"  >a_nc_V2.2.sh
 #   V2.3	06/08/18 16:31:16	Futura version donde se averigua la version de carga_parametros
-#								sacandola del mail
+#								sacandola del main
 #--------------------------------------------------------------------------------
 
 #-------------------------------------------------------------------------------
