@@ -24,6 +24,7 @@ LISTA_FUNCIONES[a_et]="crea_listado_repositorio_V${VERS_MODS}.sh \
 						buscar_en_repositorio_V${VERS_MODS}.sh \
 						NC_en_mem_V${VERS_MODS}.sh \
 						generar_reporte_V${VERS_MODS}.sh \
+						func_vs_main_V${VERS_MODS}.sh \
 						config_param_V${VERS_MODS}.sh \
 						inicializar_contadores_V${VERS_MODS}.sh"
 												
@@ -36,6 +37,7 @@ LISTA_FUNCIONES[a_nc]="crea_listado_repositorio_V${VERS_MODS}.sh \
 						NC_en_mem_V${VERS_MODS}.sh \
 						generar_reporte_V${VERS_MODS}.sh \
 						reporte_t_parc_V${VERS_MODS}.sh \
+						func_vs_main_V${VERS_MODS}.sh \
 						config_param_V${VERS_MODS}.sh \
 						inicializar_contadores_V${VERS_MODS}.sh"
 												

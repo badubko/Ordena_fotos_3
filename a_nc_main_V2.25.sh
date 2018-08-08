@@ -80,46 +80,36 @@
 #							
 #-----------------------------------------------------------------------
 
-#------------------------------------------------------------------------------
-informar_revisar ()
-#------------------------------------------------------------------------------
-{
-# MEjorar Formato 
 
-    echo "${NOM_ABREV}: ${INF_REV} ${FNAME} ${REGLA}    ---> Informar/Revisar" >>${ARCHIVO_LOG}
-#    printf "\n" >>${ARCHIVO_LOG}  # Se puso al comienzo de cada iteracion.
-
-#    echo "Archivo: $FNAME $REGLA"
-#    echo "Tamaño: $TAM  EN_REPOS: $EN_REPOS EN_NO_COPIAR: $EN_NO_COPIAR"
-return
-}
 #------------------------------------------------------------------------------
-agregar_a_no_copiar()
+# agregar_a_no_copiar()
+# 08/08/18 14:16:36		Estas lineas se comentan por las dudas si hay que volver
+#						atras. Estan ahora en el archivo func_vs_main
 #------------------------------------------------------------------------------
-{
+#{
 # Unificar formato con informar_revisar
 #
 # echo $FNAME "# $AGR_A_NO_COPIAR  $REGLA  $NOM_ABREV $RUN_DATE" | tee -a >>$LISTA_FILES_NO_COPIAR
 
-if [ "${Fecha_file_cel}" = "0" ]  #3
-then
-    if [ ${TIPO_NOM_ARCH} = "GENERAL" ] #2
-    then
-		Fecha_file_cel="En_Nombre"
-    else   	#2
-        if [ ${TAM} = "GT0" ] #1
-        then
-			Fecha_file_cel="$( obtener_fecha ${FNAME_FULL} )" #--------->>>#
-	    else #1
-			Fecha_file_cel="????"
-		fi  #1
-	fi	#2
-fi #3
+#if [ "${Fecha_file_cel}" = "0" ]  #3
+#then
+#    if [ ${TIPO_NOM_ARCH} = "GENERAL" ] #2
+#    then
+#		Fecha_file_cel="En_Nombre"
+#    else   	#2
+#        if [ ${TAM} = "GT0" ] #1
+#        then
+#			Fecha_file_cel="$( obtener_fecha ${FNAME_FULL} )" #--------->>>#
+#	    else #1
+#			Fecha_file_cel="????"
+#		fi  #1
+#	fi	#2
+#fi #3
 
-printf "%s  %s  %s  %s\n" ${FNAME} ${Tam_file_cel} ${Fecha_file_cel} "# ${REGLA}  ${NOM_ABREV} ${RUN_DATE}" >>${LISTA_FILES_NO_COPIAR}
+#printf "%s  %s  %s  %s\n" ${FNAME} ${Tam_file_cel} ${Fecha_file_cel} "# ${REGLA}  ${NOM_ABREV} ${RUN_DATE}" >>${LISTA_FILES_NO_COPIAR}
 
-return
-}
+#return
+#}
 
 #------------------------------------------------------------------------------
 Tinicio=$(date +%s)

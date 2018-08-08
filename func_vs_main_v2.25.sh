@@ -110,7 +110,8 @@ informar_revisar ()
 {
 
 #  Hasta tanto no se implemente el contador
-   echo "$NOM_ABREV: $INF_REV $FNAME $REGLA  Informar/Revisar" 	>>$ARCHIVO_LOG
+   echo "${NOM_ABREV}: ${INF_REV} ${FNAME} ${REGLA}    ---> Informar/Revisar" >>${ARCHIVO_LOG}
+   
    printf "\n" 													>>$ARCHIVO_LOG
 
 return
@@ -123,7 +124,26 @@ agregar_a_no_copiar()
 # En todos los casos de Fotos_cel_a_Estr_Temp el Tamaño sera "0" y la fecha "????"
 # debido a que SOLAMENTE se agregan a N/C los archivos de tamaño=0
 #
-printf "%s  %s  %s  %s\n" ${FNAME} ${Tam_file_cel} "????" "# ${AGR_A_NO_COPIAR}  ${REGLA}  ${NOM_ABREV} ${RUN_DATE}" >>$LISTA_FILES_NO_COPIAR
+# La siguiente es la linea de a_et_main original
+# printf "%s  %s  %s  %s\n" ${FNAME} ${Tam_file_cel} "????" "# ${AGR_A_NO_COPIAR}  ${REGLA}  ${NOM_ABREV} ${RUN_DATE}" >>$LISTA_FILES_NO_COPIAR
+#
+# Estas lineas vienen de a_nc_main
+if [ "${Fecha_file_cel}" = "0" ]  #3
+then
+    if [ ${TIPO_NOM_ARCH} = "GENERAL" ] #2
+    then
+		Fecha_file_cel="En_Nombre"
+    else   	#2
+        if [ ${TAM} = "GT0" ] #1
+        then
+			Fecha_file_cel="$( obtener_fecha ${FNAME_FULL} )" #--------->>>#
+	    else #1
+			Fecha_file_cel="????"
+		fi  #1
+	fi	#2
+fi #3
+
+printf "%s  %s  %s  %s\n" ${FNAME} ${Tam_file_cel} ${Fecha_file_cel} "# ${REGLA}  ${NOM_ABREV} ${RUN_DATE}" >>${LISTA_FILES_NO_COPIAR}
 
 return
 }
