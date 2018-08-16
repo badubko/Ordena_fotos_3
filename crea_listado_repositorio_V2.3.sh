@@ -501,6 +501,8 @@ do
 		else #3
 			echo "$NOM_ABREV: NO se creara listado del repositorio ${REPOSITORIO[$NUM_REPOS]}"
 		fi #3
+			 # Aca hay una falla de logica: seria posible no generar listado
+			 # de los repositorios y seguir adelante con resultados impredecibles
 			 #*************************************************************
 			 if [ ${SOLO_REGEN_LISTA_FILES_REP[$NUM_REPOS]^^} = "TRUE" ]  #2.2
 			 then
