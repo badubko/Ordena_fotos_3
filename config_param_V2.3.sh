@@ -74,8 +74,12 @@ fi
 DIR_REF=${PWD}
 FLAG_TERM="FALSE"           # Si algun parametro no esta definido terminar temprano
 
-#
-# Aca viene el banner y la lista de variables a incluir
+if [  -f "${CP_IN_FILE}" ]
+then
+	echo "El archivo: ${CP_IN_FILE} No existe..."
+	exit
+fi
+
 
 if [  -d "${CP_OUT_FILE}" ]
 then
@@ -87,6 +91,9 @@ if [  -f "${CP_OUT_FILE}" ]
 then
 	rm -f "${CP_OUT_FILE}"
 fi
+
+#
+# Aca viene el banner y la lista de variables a incluir
 
   echo "#! /bin/bash"									 >${CP_OUT_FILE}
   linea_guiones 										>>${CP_OUT_FILE}
