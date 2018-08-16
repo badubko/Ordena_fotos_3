@@ -153,7 +153,6 @@ VERS_MODS="XYZVVVZXY"
 
 configura_parametros
 
-exit
 
 PARMS_A_INCLUIR=carga_parametros_V${VERS_MODS}.sh		
 
