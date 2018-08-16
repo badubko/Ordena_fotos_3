@@ -17,7 +17,7 @@ declare -A LISTA_FUNCIONES MAIN OUT_FILE
 VERS_MODS="2.3"
 
 LISTA_FUNCIONES[a_et]="crea_listado_repositorio_V${VERS_MODS}.sh \
-                       listar_modulos_V${VERS_MODS}.sh \
+						listar_modulos_V${VERS_MODS}.sh \
 						verif_dirs_y_files_V${VERS_MODS}.sh \
 						carga_patrones_V${VERS_MODS}.sh \
 						obtener_extension_y_tipo_V${VERS_MODS}.sh \
