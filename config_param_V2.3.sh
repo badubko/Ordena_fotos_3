@@ -74,7 +74,7 @@ fi
 DIR_REF=${PWD}
 FLAG_TERM="FALSE"           # Si algun parametro no esta definido terminar temprano
 
-if [  -f "${CP_IN_FILE}" ]
+if [ ! -f "${CP_IN_FILE}" ]
 then
 	echo "El archivo: ${CP_IN_FILE} No existe..."
 	exit
@@ -115,7 +115,7 @@ fi
   
   for VARS_A_INCLUIR in ${LISTA_VARIABLES}
   do
-	echo "A incluir: ${VARS_A_INCLUIR} "
+#	echo "A incluir: ${VARS_A_INCLUIR} "
      grep -v '^#.*' ${CP_IN_FILE} | grep  '\<'"${VARS_A_INCLUIR}" 	>>${CP_OUT_FILE}
      if [ $? != 0 ]
      then
