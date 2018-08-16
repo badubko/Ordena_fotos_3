@@ -111,7 +111,7 @@ fi
   printf "\n"											>>${CP_OUT_FILE}
   echo "# Variables incluidas:"				  	        >>${CP_OUT_FILE}
   
-  echo ${LISTA_VARIABLES}
+#  echo ${LISTA_VARIABLES}
   
   for VARS_A_INCLUIR in ${LISTA_VARIABLES}
   do
