@@ -498,16 +498,16 @@ do
 			reporte_de_repositorio
 			reporte_de_duplicados
 
-			 #  *************************************************************
+		else #3
+			echo "$NOM_ABREV: NO se creara listado del repositorio ${REPOSITORIO[$NUM_REPOS]}"
+		fi #3
+			 #*************************************************************
 			 if [ ${SOLO_REGEN_LISTA_FILES_REP[$NUM_REPOS]^^} = "TRUE" ]  #2.2
 			 then
 				   echo "${FUNCNAME}: TERMINAR= ${SOLO_REGEN_LISTA_FILES_REP[$NUM_REPOS]^^} "
 				   exit  # <----------------- Solo generamos la lista y salimos.	             
 			 fi #2.2
-			#  *************************************************************
-		else #3
-			echo "$NOM_ABREV: NO se creara listado del repositorio ${REPOSITORIO[$NUM_REPOS]}"
-		fi #3
+			#*************************************************************
 	fi #4 
 done
 
